@@ -17,9 +17,9 @@ let Course = mongoose.model("Assignment", courseSchema2, "Assignment");
 
 async function AllCourses() {
   let data = await Course.find()
-    .select(["tags"])
-    .and([{ tags: "backend" }])
-    .sort("backend");
+    .or([{ tags: "backend" }, { tags: "frontend" }])
+    .select(["tags", "name", "author"])
+    .sort("-price");
 
   console.log(data);
 }
