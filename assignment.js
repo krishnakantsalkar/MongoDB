@@ -14,10 +14,12 @@ let courseSchema2 = new mongoose.Schema({
   price: { type: Number }
 });
 let Course = mongoose.model("Assignment", courseSchema2, "Assignment");
-console.log(Course);
 
 async function AllCourses() {
-  let data = await Course.find().select(["name"]);
+  let data = await Course.find()
+    .select(["tags"])
+    .and([{ tags: "backend" }])
+    .sort("backend");
 
   console.log(data);
 }
