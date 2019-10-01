@@ -1,0 +1,23 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "database handling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/krishnakantsalkar/MongoDB.git"
+  },
+  "author": "krishnakant salkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krishnakantsalkar/MongoDB/issues"
+  },
+  "homepage": "https://github.com/krishnakantsalkar/MongoDB#readme",
+  "dependencies": {
+    "mongoose": "^5.7.3",
+    "nodemon": "^1.19.3"
+  }
+}
